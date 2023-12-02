@@ -1,6 +1,7 @@
 package be.haex.puzzle;
 
 import be.haex.puzzle.day.PuzzleDayOne;
+import be.haex.puzzle.day.PuzzleDayTwo;
 
 import java.util.Map;
 import java.util.Optional;
@@ -26,7 +27,8 @@ public class PuzzleSolver {
 
 	static {
 		PUZZLES = Map.ofEntries(
-				Map.entry(1, new PuzzleDayOne())
+				Map.entry(1, new PuzzleDayOne()),
+				Map.entry(2, new PuzzleDayTwo())
 		);
 	}
 }
