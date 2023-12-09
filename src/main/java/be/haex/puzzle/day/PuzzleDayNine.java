@@ -5,7 +5,6 @@ import be.haex.puzzle.Puzzle;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 import java.util.function.LongBinaryOperator;
 import java.util.function.ToLongFunction;
 import java.util.stream.IntStream;
