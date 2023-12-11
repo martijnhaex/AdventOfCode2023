@@ -1,6 +1,7 @@
 package be.haex.puzzle;
 
 import be.haex.puzzle.day.PuzzleDayEight;
+import be.haex.puzzle.day.PuzzleDayEleven;
 import be.haex.puzzle.day.PuzzleDayFive;
 import be.haex.puzzle.day.PuzzleDayFour;
 import be.haex.puzzle.day.PuzzleDayNine;
@@ -62,7 +63,8 @@ public class PuzzleSolver {
 				Map.entry(7, new PuzzleDaySeven()),
 				Map.entry(8, new PuzzleDayEight()),
 				Map.entry(9, new PuzzleDayNine()),
-				Map.entry(10, new PuzzleDayTen())
+				Map.entry(10, new PuzzleDayTen()),
+				Map.entry(11, new PuzzleDayEleven())
 		);
 	}
 }
