@@ -42,7 +42,6 @@ public class PuzzleDayFifteen implements Puzzle<Integer> {
 				.flatMap(Arrays::stream);
 	}
 
-
 	@Override
 	public Integer solvePartTwo() {
 		var lightBoxes = LightBoxes.empty();

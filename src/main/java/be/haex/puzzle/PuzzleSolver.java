@@ -10,6 +10,7 @@ import be.haex.puzzle.day.PuzzleDayNine;
 import be.haex.puzzle.day.PuzzleDayOne;
 import be.haex.puzzle.day.PuzzleDaySeven;
 import be.haex.puzzle.day.PuzzleDaySix;
+import be.haex.puzzle.day.PuzzleDaySixteen;
 import be.haex.puzzle.day.PuzzleDayTen;
 import be.haex.puzzle.day.PuzzleDayThirteen;
 import be.haex.puzzle.day.PuzzleDayThree;
@@ -72,7 +73,8 @@ public class PuzzleSolver {
 				Map.entry(12, new PuzzleDayTwelve()),
 				Map.entry(13, new PuzzleDayThirteen()),
 				Map.entry(14, new PuzzleDayFourteen()),
-				Map.entry(15, new PuzzleDayFifteen())
+				Map.entry(15, new PuzzleDayFifteen()),
+				Map.entry(16, new PuzzleDaySixteen())
 		);
 	}
 }
