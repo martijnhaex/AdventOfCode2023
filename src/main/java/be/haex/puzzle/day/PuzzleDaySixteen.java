@@ -81,7 +81,7 @@ public class PuzzleDaySixteen implements Puzzle<Long> {
 					.count();
 		}
 
-		public boolean withinTiles(Instruction instruction) {
+		private boolean withinTiles(Instruction instruction) {
 			var position = instruction.position();
 
 			return position.x() >= 0 && position.x() < tiles.length
