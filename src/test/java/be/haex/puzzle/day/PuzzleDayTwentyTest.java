@@ -10,11 +10,11 @@ class PuzzleDayTwentyTest {
 	void solvePartOne() {
 		assertEquals(32_000_000, new PuzzleDayTwenty("puzzleDayTwentyExampleOne.txt").solvePartOne());
 		assertEquals(11_687_500, new PuzzleDayTwenty("puzzleDayTwentyExampleTwo.txt").solvePartOne());
-		assertEquals(806_332_748, new PuzzleDayTwenty("puzzleDayTwentyMyInput.txt").solvePartOne());
+		assertEquals(806_332_748, new PuzzleDayTwenty().solvePartOne());
 	}
 
 	@Test
 	void solvePartTwo() {
-		assertEquals(228_060_006_554_227L, new PuzzleDayTwenty("puzzleDayTwentyMyInput.txt").solvePartTwo());
+		assertEquals(228_060_006_554_227L, new PuzzleDayTwenty().solvePartTwo());
 	}
 }

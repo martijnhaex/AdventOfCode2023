@@ -35,17 +35,17 @@ public class PuzzleDayTwenty implements Puzzle<Long> {
 
 	@Override
 	public Long solvePartOne() {
-		return readCommunicationSystem(fileName)
+		return readCommunicationSystem()
 				.pulsesReceivedAfterPressingButton(1_000);
 	}
 
 	@Override
 	public Long solvePartTwo() {
-		return readCommunicationSystem(fileName)
+		return readCommunicationSystem()
 				.minimumNumberOfButtonPressesToReceivePulseOfTypeInModule(PulseType.LOW, "rx");
 	}
 
-	private CommunicationSystem readCommunicationSystem(String fileName) {
+	private CommunicationSystem readCommunicationSystem() {
 		return CommunicationSystem.parse(readContentOfInputFile(fileName));
 	}
 
