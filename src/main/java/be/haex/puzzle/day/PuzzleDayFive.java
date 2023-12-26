@@ -2,6 +2,7 @@ package be.haex.puzzle.day;
 
 import be.haex.puzzle.Puzzle;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -44,21 +45,22 @@ public class PuzzleDayFive implements Puzzle<Long> {
 						   Lookup humidityToLocation) {
 
 		public static Almanac parse(List<String> input) {
-			var seedsToPlanInput = input.removeFirst();
-			var emptyIndexes = IntStream.range(1, input.size())
-					.filter(index -> input.get(index).isBlank())
+			var mutableInput = new ArrayList<>(input);
+			var seedsToPlanInput = mutableInput.removeFirst();
+			var emptyIndexes = IntStream.range(1, mutableInput.size())
+					.filter(index -> mutableInput.get(index).isBlank())
 					.boxed()
 					.toList();
 
 			return new Almanac(
 					seedsToPlantFrom(seedsToPlanInput),
-					Lookup.parse(input.subList(2, emptyIndexes.get(0))),
-					Lookup.parse(input.subList(emptyIndexes.get(0) + 2, emptyIndexes.get(1))),
-					Lookup.parse(input.subList(emptyIndexes.get(1) + 2, emptyIndexes.get(2))),
-					Lookup.parse(input.subList(emptyIndexes.get(2) + 2, emptyIndexes.get(3))),
-					Lookup.parse(input.subList(emptyIndexes.get(3) + 2, emptyIndexes.get(4))),
-					Lookup.parse(input.subList(emptyIndexes.get(4) + 2, emptyIndexes.get(5))),
-					Lookup.parse(input.subList(emptyIndexes.get(5) + 2, input.size()))
+					Lookup.parse(mutableInput.subList(2, emptyIndexes.get(0))),
+					Lookup.parse(mutableInput.subList(emptyIndexes.get(0) + 2, emptyIndexes.get(1))),
+					Lookup.parse(mutableInput.subList(emptyIndexes.get(1) + 2, emptyIndexes.get(2))),
+					Lookup.parse(mutableInput.subList(emptyIndexes.get(2) + 2, emptyIndexes.get(3))),
+					Lookup.parse(mutableInput.subList(emptyIndexes.get(3) + 2, emptyIndexes.get(4))),
+					Lookup.parse(mutableInput.subList(emptyIndexes.get(4) + 2, emptyIndexes.get(5))),
+					Lookup.parse(mutableInput.subList(emptyIndexes.get(5) + 2, mutableInput.size()))
 			);
 		}
 

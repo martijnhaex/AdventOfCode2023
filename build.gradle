@@ -8,6 +8,14 @@ version = '1.0.0'
 sourceCompatibility = 21
 targetCompatibility = 21
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'be.haex.puzzle.PuzzleSolver'
+        )
+    }
+}
+
 repositories {
     mavenCentral()
 }

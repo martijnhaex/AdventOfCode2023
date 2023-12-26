@@ -2,6 +2,7 @@ package be.haex.puzzle.day;
 
 import be.haex.puzzle.Puzzle;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -45,8 +46,9 @@ public class PuzzleDayEight implements Puzzle<Long> {
 	private record Wasteland(Instructions instructions, Map<String, Node> nodes) {
 
 		public static Wasteland parse(List<String> input) {
-			var instructions = Instructions.parse(input.removeFirst());
-			var nodes = input.subList(1, input.size()).stream()
+			var mutableInput = new ArrayList<>(input);
+			var instructions = Instructions.parse(mutableInput.removeFirst());
+			var nodes = mutableInput.subList(1, mutableInput.size()).stream()
 					.map(Node::parse)
 					.collect(toMap(Node::name, identity()));
 
